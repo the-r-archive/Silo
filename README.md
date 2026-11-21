@@ -1,64 +1,84 @@
 # SILO — Stay Focused. Stay in Control.
 
-**SILO** is a minimalist Chrome extension built to create a cleaner, calmer, and more focused browsing experience. Designed with a modern Apple-inspired glassmorphism interface, SILO combines simplicity, aesthetics, and productivity in one place.
+**SILO** is a modern, minimalist Chrome extension designed to make your browsing experience more focused, organized, and distraction-free.
 
-Whether you're studying, working, or simply browsing the web, SILO helps you stay organized and keep distractions under control.
+Built with an Apple-inspired glassmorphism aesthetic, SILO brings together thoughtful design, smooth interactions, and productivity-focused functionality in a clean and intuitive interface.
+
+Whether you're studying, working, or managing your everyday browsing, SILO helps you create a calmer digital space where your attention stays where it matters.
 
 ## ✨ Features
 
-- **Minimal Interface** — Clean, modern design with an Apple-inspired glass aesthetic.
-- **Focus Experience** — A distraction-free environment to help you concentrate.
-- **Lightweight** — Designed to work smoothly without unnecessary complexity.
-- **Modern UI** — Smooth interactions, elegant typography, and polished visuals.
-- **Chrome Integration** — Easily accessible directly from your browser toolbar.
+- **Apple-Inspired Design** — A refined glassmorphism interface with a clean and modern visual identity.
+- **Focus-Oriented Experience** — Designed to encourage mindful browsing and reduce unnecessary distractions.
+- **Minimal & Intuitive** — Everything is designed to feel simple, accessible, and easy to use.
+- **Smooth Interactions** — Polished transitions, elegant typography, and carefully designed interface elements.
+- **Lightweight Performance** — Built to keep things responsive without unnecessary complexity.
+- **Chrome Integration** — Access SILO conveniently from your Chrome browser toolbar.
 
-## 📥 Installation Guide
+## 📥 Download & Installation
 
-SILO is currently available to install manually using Chrome's Developer Mode.
+There are two ways to get SILO.
 
-Follow these steps to get started:
+### Option 1 — Direct Download (Recommended)
 
-### Step 1 — Download SILO
-1. Visit this GitHub repository.
+Download the latest available SILO ZIP package directly:
+
+**[⬇️ Download SILO v3.4.0](https://r-archive.vercel.app/assets/Silo-3.4.0.zip)**
+
+1. Click the download link above.
+2. Save the ZIP file to your computer.
+3. Extract the downloaded ZIP file into a folder.
+4. Follow the installation instructions below.
+
+### Option 2 — Download from GitHub
+
+1. Open this GitHub repository.
 2. Click the green **Code** button.
 3. Select **Download ZIP**.
-4. Extract the downloaded ZIP file to a folder on your computer.
+4. Extract the downloaded ZIP file.
 
-### Step 2 — Open Chrome Extensions
+### Install SILO in Google Chrome
+
+Follow these steps to install the extension manually.
+
+**Step 1 — Open Chrome Extensions**
+
 1. Open Google Chrome.
-2. Enter the following address in your address bar:
-
-   `chrome://extensions`
-
+2. Enter `chrome://extensions` in the address bar.
 3. Press Enter.
 
-### Step 3 — Enable Developer Mode
-1. Find the **Developer mode** toggle in the top-right corner.
+**Step 2 — Enable Developer Mode**
+
+1. Locate the **Developer mode** toggle in the top-right corner.
 2. Turn it ON.
 
-### Step 4 — Load SILO
-1. Click the **Load unpacked** button.
+**Step 3 — Load SILO**
+
+1. Click **Load unpacked**.
 2. Navigate to the folder where you extracted SILO.
 3. Select the folder containing the `manifest.json` file.
 4. Click **Select Folder**.
 
-### Step 5 — Start Using SILO
-1. SILO will now appear in your Chrome extensions list.
-2. Click the puzzle icon in Chrome's toolbar.
-3. Pin SILO for quick access.
-4. Click the SILO icon to launch it.
+**Step 4 — Pin SILO**
 
-<aside>
-🎉 **You're all set!** SILO is now installed and ready to use.
-</aside>
+1. SILO will appear in your installed extensions.
+2. Click the puzzle icon in Chrome's toolbar.
+3. Find SILO and click the pin icon.
+4. Click the SILO icon whenever you want to access it.
+
+🎉 **That's it! SILO is successfully installed and ready to use.**
 
 ## 🔄 Updating SILO
 
-When a new version is available:
-1. Download the latest repository ZIP.
-2. Extract the updated files.
+To update SILO when a newer version becomes available:
+
+1. Download the latest ZIP package.
+2. Extract the updated files into a new folder.
 3. Open `chrome://extensions`.
-4. Click the reload icon on the SILO extension card, or remove the old version and load the updated folder.
+4. Locate SILO.
+5. Click the reload icon to refresh the extension.
+
+If necessary, remove the previous installation and load the updated folder using **Load unpacked**.
 
 ## 🛠️ Built With
 
@@ -67,12 +87,20 @@ When a new version is available:
 - JavaScript
 - Chrome Extensions API
 
-## 💡 Project Philosophy
+## 💭 The Idea Behind SILO
 
-SILO is built around a simple idea: productivity doesn't need to be complicated. A thoughtfully designed interface and a focused environment can make everyday browsing feel more intentional.
+Productivity isn't always about doing more. Sometimes, it's about removing the things that get in your way.
+
+SILO was created with this philosophy — combining a distraction-conscious browsing experience with a thoughtfully crafted interface.
+
+No unnecessary complexity. Just a cleaner way to interact with your browser.
 
 ## 👨‍💻 Developer
 
-Created with ❤️ by Rajit Saha as an independent project.
+Designed and developed with ❤️ by **Rajit Saha** as an independent project.
+
+Explore more of my work: [The R Archive](https://r-archive.vercel.app/)
+
+---
 
 **SILO — Less distraction. More intention.**
