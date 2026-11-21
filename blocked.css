@@ -1,0 +1,58 @@
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:28px;background:radial-gradient(ellipse at 50% 12%,rgba(90,66,231,.34),transparent 52%),radial-gradient(ellipse at 82% 88%,rgba(112,61,234,.14),transparent 45%),linear-gradient(150deg,#101226,#090b13 70%);color:#f8f7ff;font-family:'Poppins',sans-serif}
+.card{width:min(100%,600px);padding:40px 40px 34px;border:1px solid #ffffff1f;border-radius:30px;background:linear-gradient(150deg,#ffffff15,#ffffff05);backdrop-filter:blur(26px);box-shadow:0 30px 90px #0009,inset 0 1px #ffffff18;text-align:center;animation:cardIn .55s cubic-bezier(.2,.8,.25,1) both}
+.brand-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:26px;animation:riseIn .5s .1s ease both}
+.brand-logo{width:34px;height:34px;filter:drop-shadow(0 6px 14px rgba(90,66,231,.5));animation:logoFloat 5.5s ease-in-out infinite}
+.brand-name{font-size:19px;font-weight:700;letter-spacing:-.6px}
+.eyebrow{margin:0;color:#b3a4ff;font-size:10px;font-weight:700;letter-spacing:2.4px;animation:riseIn .5s .16s ease both}
+h1{margin:12px 0 15px;font-size:clamp(36px,6.5vw,54px);line-height:1.06;letter-spacing:-2px;font-weight:600;animation:riseIn .55s .22s ease both}
+h1 em{font-style:normal;color:#a99cff}
+.lead{max-width:400px;margin:0 auto;color:#b9b6cc;font-size:14.5px;line-height:1.7;animation:riseIn .5s .3s ease both}
+.lead strong{color:#fff;font-weight:600}
+.actions{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin-top:26px;animation:riseIn .5s .38s ease both}
+button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 20px;border-radius:12px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;transition:transform .16s,filter .16s,border-color .16s,background .16s,box-shadow .16s}
+button svg{width:16px;height:16px;flex-shrink:0}
+button:active{transform:scale(.98)}
+button:focus-visible,input:focus-visible{outline:2px solid #a99cff;outline-offset:2px}
+.primary{border:1px solid #b9aaff55;background:linear-gradient(105deg,#8f7dff,#5f45eb);color:#fff;box-shadow:0 10px 26px #5f45eb3d}
+.primary:hover{filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 14px 32px #5f45eb55}
+.ghost{border:1px solid #ffffff1c;background:#ffffff08;color:#d7d3e6}
+.ghost:hover{border-color:#ffffff33;background:#ffffff0f;transform:translateY(-1px)}
+.danger{border:1px solid #f8717159;background:#f8717118;color:#ffbdbd}
+.danger:hover{background:#f8717126;transform:translateY(-1px)}
+.danger:disabled{opacity:.55;cursor:wait;transform:none}
+.gate{margin-top:22px;padding:18px 20px;border:1px solid #ffffff16;border-radius:16px;background:#0a0c1673;text-align:left;animation:gateIn .28s cubic-bezier(.2,.8,.25,1) both}
+.gate[hidden]{display:none}
+.gate.is-shake #quitForm{animation:shake .4s ease}
+.gate.is-shake input{border-color:#f87171aa}
+@keyframes gateIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.gate-head{display:flex;align-items:center;gap:10px}
+.gate-icon{flex-shrink:0;display:grid;place-items:center;width:20px;height:20px;color:#ffb4b4}
+.gate-icon svg{width:20px;height:20px}
+.gate-title{margin:0;color:#fff;font-size:14px;font-weight:600;letter-spacing:-.2px}
+.phrase{position:relative;overflow:hidden;margin:14px 0 11px;padding:11px 14px;border:1px dashed #a99cff4d;border-radius:10px;background:#a99cff10;color:#d8d2ff;font-size:13px;font-weight:600;text-align:center;letter-spacing:.2px}
+.phrase:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.10) 50%,transparent 62%);transform:translateX(-130%);animation:phraseShine 4.6s ease-in-out infinite;pointer-events:none}
+input{width:100%;padding:13px 14px;border:1px solid #ffffff20;border-radius:11px;background:#05060c99;color:#fff;font:inherit;font-size:13.5px;outline:none;transition:border-color .16s,box-shadow .16s}
+input::placeholder{color:#6f6b84}
+input:focus{border-color:#a99cff88;box-shadow:0 0 0 3px #a99cff1f}
+.gate-error{min-height:16px;margin:8px 0 0;color:#ffb4b4;font-size:11.5px;line-height:1.4}
+.gate-error:not(:empty){animation:errorIn .3s ease both}
+@keyframes errorIn{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+.gate-actions{display:flex;gap:9px;justify-content:flex-end;margin-top:8px}
+.small{padding:11px 15px;font-size:12.5px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes cardIn{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes riseIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes phraseShine{0%,55%{transform:translateX(-130%)}78%,100%{transform:translateX(130%)}}
+@keyframes shake{20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+}
+@media (max-width:520px){
+  body{padding:18px}
+  .card{padding:32px 22px 26px;border-radius:24px}
+  .actions{flex-direction:column}
+  .actions button{width:100%}
+  h1{letter-spacing:-1.4px}
+}

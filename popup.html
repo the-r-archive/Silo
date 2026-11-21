@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silo</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="header">
+      <div class="brand">
+        <svg class="brand-logo" viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="siloMark" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5A42E7"/>
+              <stop offset="1" stop-color="#703DEA"/>
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="10.5" fill="url(#siloMark)"/>
+          <path d="M13.6 38.3V20.2a10.4 10.4 0 0 1 20.8 0v18.1a1.4 1.4 0 0 1-1.4 1.4H15a1.4 1.4 0 0 1-1.4-1.4Z" fill="#fff"/>
+          <rect x="13.6" y="26.2" width="20.8" height="1.5" fill="#D3D1F8"/>
+          <rect x="13.6" y="33" width="20.8" height="1.5" fill="#D3D1F8"/>
+          <rect x="10.6" y="39.8" width="26.8" height="1.75" rx=".875" fill="#C5B1F7"/>
+          <path d="M23.3 14.7A3.35 3.35 0 1 1 20.65 17.9" fill="none" stroke="#4F46E5" stroke-width="1.55" stroke-linecap="round"/>
+          <path d="M20.7 17.3A3.35 3.35 0 0 1 22.75 14.89" fill="none" stroke="#D3D1F8" stroke-width="1.55" stroke-linecap="round"/>
+        </svg>
+        <h1>Silo<span class="brand-period">.</span></h1>
+      </div>
+      <div class="live-status" id="liveStatus"><i></i><span id="statusText">Ready</span></div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Silo sections">
+      <span class="tab-glider" id="tabGlider" aria-hidden="true"></span>
+      <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-focus" data-tab="focus">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M12 7.6V12l2.9 1.8"/></svg>
+        <span>Focus</span>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-sites" data-tab="sites">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v6c0 4.4 3.2 7.6 7.5 9 4.3-1.4 7.5-4.6 7.5-9V6L12 3Z"/></svg>
+        <span>Sites</span>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-stats" data-tab="stats">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V11"/><path d="M12 20V4"/><path d="M19 20v-6"/></svg>
+        <span>Stats</span>
+      </button>
+    </nav>
+
+    <section class="panel" id="panel-focus" role="tabpanel">
+      <section class="hero glass">
+        <div class="timer-wrap">
+          <div class="timer-orbit" id="timerOrbit">
+            <div class="timer-face">
+              <div class="timer-label" id="timerLabel">FOCUS SESSION</div>
+              <div class="timer-value" id="timerDisplay">25:00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="duration-picker" aria-label="Choose focus duration">
+          <button class="duration-option active" data-minutes="25">25 <small>MIN</small></button>
+          <button class="duration-option" data-minutes="45">45 <small>MIN</small></button>
+          <button class="duration-option" data-minutes="60">60 <small>MIN</small></button>
+        </div>
+
+        <div class="actions">
+          <button class="start-button" id="startPauseBtn">
+            <span id="startButtonText">Start focusing</span>
+            <b class="start-icon" id="startButtonIcon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.2 5.6c0-.8.9-1.3 1.6-.9l9.2 6.4c.6.4.6 1.4 0 1.8l-9.2 6.4c-.7.4-1.6-.1-1.6-.9V5.6Z"/></svg>
+            </b>
+          </button>
+          <button class="reset-button" id="resetBtn" title="Reset timer" aria-label="Reset timer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <section class="panel" id="panel-stats" role="tabpanel" hidden>
+        <section class="stats">
+          <article class="stat glass">
+            <div class="stat-top">
+              <span class="stat-symbol purple-symbol">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg>
+              </span>
+              <span class="stat-caption">TODAY</span>
+            </div>
+            <strong id="todayMinutes">0<span>m</span></strong>
+          </article>
+          <article class="stat glass">
+            <div class="stat-top">
+              <span class="stat-symbol lilac-symbol">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.2 2.4 2.4 4.8-5.2"/></svg>
+              </span>
+              <span class="stat-caption">SESSIONS</span>
+            </div>
+            <strong id="todaySessions">0</strong>
+          </article>
+          <article class="stat glass">
+            <div class="stat-top">
+              <span class="stat-symbol indigo-symbol">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+              </span>
+              <span class="stat-caption">GOAL</span>
+            </div>
+            <strong id="goalProgress">0<span>%</span></strong>
+          </article>
+        </section>
+
+        <section class="section glass goal-section">
+          <div class="section-heading">
+            <h3>Daily goal</h3>
+            <label class="select-wrap">
+              <select id="goalSelect" aria-label="Daily focus goal">
+                <option value="60">1 hour</option>
+                <option value="120" selected>2 hours</option>
+                <option value="180">3 hours</option>
+                <option value="240">4 hours</option>
+                <option value="360">6 hours</option>
+              </select>
+              <span class="select-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </span>
+            </label>
+          </div>
+          <div class="progress-track"><div class="progress-fill" id="goalBar"></div></div>
+          <div class="progress-labels"><span id="goalDone">0 min</span><span id="goalTotal">120 min goal</span></div>
+        </section>
+
+        <section class="section glass">
+          <div class="history-heading"><h3>Recent sessions</h3><span class="history-count" id="historyCount">0 TOTAL</span></div>
+          <div class="history-list" id="historyList"><div class="empty-history">No sessions yet.</div></div>
+        </section>
+      </section>
+    <section class="panel" id="panel-sites" role="tabpanel" hidden>
+      <section class="section glass">
+        <div class="section-heading">
+          <h3>Blocked sites</h3>
+          <label class="toggle" title="Enable website blocker">
+            <input type="checkbox" id="blockerToggle" checked>
+            <span class="toggle-track"></span>
+          </label>
+        </div>
+        <p class="shield-status" id="shieldStatus"><i class="shield-dot" id="shieldDot"></i><span id="shieldText">Shield up.</span></p>
+        <div class="site-list" id="blockedList"></div>
+        <form class="add-site" id="addSiteForm">
+          <label class="add-field">
+            <span class="add-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+            <input id="siteInput" type="text" placeholder="e.g. tiktok.com" aria-label="Website to block" autocomplete="off" spellcheck="false">
+          </label>
+          <button type="submit" id="addSiteBtn">Add</button>
+        </form>
+        <p class="inline-message" id="blockerNote" aria-live="polite"></p>
+      </section>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
